@@ -3,6 +3,7 @@
  *
  * Created: 04.01.2017 15:22:40
  * Author : maxi
+ http://www.mikrocontroller.net/articles/AVR-GCC-Tutorial#Schreiben_in_Register
  */ 
 
 #include <avr/io.h>
@@ -43,8 +44,7 @@ int main(void)
     while (1) 
     {
 	
-		if (PIND &  (1<<PD4))
-		{
+		if (PIND &  ((1<<PD4) & (1<<PD3)) {
 					//LED EIN
 		PORTD |= (1<<PD5);
 		}
